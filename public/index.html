@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App - Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container">
+            <h1>My Notes</h1>
+            <p>Keep your thoughts organized and accessible</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Alert Container -->
+        <div id="alert-container" class="alert-container"></div>
+
+        <section class="add-note-section">
+            <div class="card add-note-card">
+                <h2>Create a New Note</h2>
+                <form id="note-form">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter note title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" placeholder="Write your note here..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Save Note</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <div class="section-header">
+                <h2>Your Notes</h2>
+                <span class="note-count" id="note-count">0 Notes</span>
+            </div>
+            
+            <div id="notes-container" class="notes-grid">
+                <!-- Notes will be dynamically injected here -->
+            </div>
+            
+            <div id="empty-state" class="empty-state hidden">
+                <div class="empty-icon">📝</div>
+                <h3>No notes found</h3>
+                <p>Create your first note above to get started.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container">
+            <p>&copy; 2026 Professional Notes App. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
